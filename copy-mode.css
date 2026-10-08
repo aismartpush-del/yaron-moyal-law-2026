@@ -64,3 +64,9 @@
   outline:2px solid rgba(201,155,70,.9) !important;
   outline-offset:3px !important;
 }
+/* Show the consultation booking form before office contact details on narrow screens. */
+@media (max-width: 900px) {
+  .contact-layout > .contact-form {
+    order: -1;
+  }
+}
