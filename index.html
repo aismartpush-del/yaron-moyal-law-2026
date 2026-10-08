@@ -2815,7 +2815,30 @@ img, svg{
   }
 }
 </style>
-<link href="copy-mode.css?v=20261008-links" rel="stylesheet"/>
+<link href="copy-mode.css?v=20261008-contact-order" rel="stylesheet"/>
+<style id="contact-mobile-visual-order-fix">
+/* Preserve the desktop two-column layout; only split the contact content on narrow screens. */
+@media (max-width: 900px) {
+  .contact-layout { display:flex !important; flex-direction:column !important; gap:18px !important; }
+  .contact-copy { display:contents !important; }
+  .contact-intros, .contact-office {
+    box-sizing:border-box;
+    direction:rtl;
+    width:100% !important;
+    padding:21px 18px !important;
+    border:1px solid #ddd2bf;
+    border-radius:14px;
+    background:rgba(255,253,249,.76);
+  }
+  .contact-intros { order:0 !important; }
+  .contact-layout > .contact-form { order:1 !important; }
+  .contact-office { order:2 !important; }
+  .contact-intros .contact-intro:last-of-type { margin-bottom:0; }
+}
+@media (max-width: 620px) {
+  .contact-intros, .contact-office { padding:20px 17px !important; border-radius:11px; }
+}
+</style>
 </head>
 <body>
 <div class="stage">
@@ -3371,12 +3394,15 @@ img, svg{
 </div>
 <div class="contact-layout">
 <div class="contact-copy">
+<div class="contact-intros">
 <a class="contact-intro" href="#contact-form">
           אפשר להשאיר פרטים ולתאם פגישת ייעוץ ראשונית ללא תשלום וללא התחייבות.
         </a>
 <a class="contact-intro" href="#contact-form">
           בפגישה הראשונית נבחנים פרטי המקרה והמסמכים הקיימים. בהתאם לצורך, המשרד מסייע באיסוף החומר הרפואי ובהתייעצות עם מומחים רפואיים לצורך בחינת התביעה.
         </a>
+</div>
+<div class="contact-office">
 <a href="#contact"><h3 class="office-title">פרטי המשרד</h3></a>
 <div class="office-list">
 <a class="office-row" href="#home">
@@ -3414,6 +3440,7 @@ img, svg{
 </svg>
 <span>דוא״ל: yaron@moyallaw.co.il</span>
 </a>
+</div>
 </div>
 </div>
 <form class="contact-form" id="contact-form">
