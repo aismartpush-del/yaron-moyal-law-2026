@@ -452,6 +452,16 @@ body{background:var(--cream);color:var(--text)}
  #about .about-credentials h3{text-align:center;font-size:20px;margin-bottom:12px}
  #about .about-credentials-grid li{padding:13px 14px;font-size:14px}
 }
+
+/* About credentials refinement — deep green and warm beige, content unchanged */
+#about .about-credentials{margin-top:34px;padding:36px 34px 40px;background:linear-gradient(145deg,#103e35,#082c27);border:1px solid #bba37b;border-radius:24px;box-shadow:0 18px 42px rgba(8,44,39,.18)}
+#about .about-credentials h3{color:#f5e9d3;text-align:center;font-size:clamp(23px,2.5vw,32px);margin:0 0 26px;line-height:1.35}
+#about .about-credentials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:0}
+#about .about-credentials-grid li{display:flex;align-items:center;gap:17px;min-width:0;padding:23px 21px;background:#f8f1e5;border:1px solid #d4b98b;border-radius:16px;color:#183d35;font-size:17px;font-weight:600;line-height:1.7;box-shadow:0 6px 16px rgba(0,0,0,.1)}
+#about .about-credentials-icon{display:grid;place-items:center;flex:0 0 58px;width:58px;height:58px;border-radius:14px;background:#174c40;color:#f2d5a1;border:1px solid #bc9f6d}
+#about .about-credentials-icon svg{display:block;width:31px;height:31px;stroke:currentColor;stroke-width:1.8}
+@media(max-width:800px){#about .about-credentials{padding:27px 17px 29px;margin-top:25px;border-radius:20px}#about .about-credentials-grid{grid-template-columns:1fr;gap:12px}#about .about-credentials-grid li{padding:18px 15px;gap:13px;font-size:16px}#about .about-credentials-icon{flex-basis:49px;width:49px;height:49px}#about .about-credentials-icon svg{width:27px;height:27px}}
+@media(max-width:380px){#about .about-credentials-grid li{font-size:15px;padding:15px 12px;gap:11px}}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
