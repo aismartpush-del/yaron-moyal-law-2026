@@ -275,12 +275,57 @@ body.a11y-motion *,body.a11y-motion *:before,body.a11y-motion *:after{scroll-beh
  .site-header .header-socials a:not(:last-child){display:none}
  .site-header .brand-label strong{white-space:nowrap}
 }
+
+/* Client-approved direction, phase 1: authentic olive-and-beige logo and focused hero */
+:root{--blue:#40583c;--navy:#293e31;--gold:#a88c65;--muted-gold:#c5b395;--cream:#f5f2e9;--paper:#fdfbf6;--line:#d4c8b5;--text:#303f34}
+body{background:var(--cream);color:var(--text)}
+.site-header{background:#fbf9f4!important;border-bottom:1px solid #dcd5c7}
+.site-header .brand{display:flex!important;flex-direction:row!important;align-items:center!important;gap:0!important;max-width:min(100%,370px);flex:0 1 370px;margin:0}
+.brand .brand-logo-full{display:block!important;width:100%;height:auto;max-width:370px;max-height:67px;object-fit:contain;object-position:right center}
+.brand .brand-logo-mobile{display:none}
+.hero{background:#f7f4ec!important;min-height:550px;grid-template-columns:54% 46%}
+.hero .hero-intro{text-align:right;background:none;padding:50px clamp(25px,4.2vw,74px);align-self:center}
+.hero .hero-eyebrow{font-size:14px;letter-spacing:.12px;color:#627256;font-weight:700;margin:0 0 16px}
+.hero h1{font-size:clamp(31px,3.05vw,49px);line-height:1.28;font-weight:800;color:#314a38;letter-spacing:0;margin:0 0 16px;text-wrap:pretty}
+.hero h1 span{display:block;color:#516249;font-size:.76em;line-height:1.45;margin-top:8px}
+.hero .hero-copy{margin:0 0 19px;max-width:550px;font-size:18px;line-height:1.65;color:#4a5048;text-align:right}
+.hero .hero-offer{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:0 0 22px;padding:13px 20px;border-right:3px solid #9e865a;background:rgba(255,255,255,.66)}
+.hero .hero-offer strong{font-size:clamp(17px,1.65vw,22px);color:#324b35;line-height:1.5}
+.hero .hero-offer span{font-size:17px;color:#4a5547}
+.hero .hero-actions{justify-content:flex-start;gap:10px}
+.hero .button{border-radius:6px;min-height:49px;box-shadow:none}
+.hero .hero-portrait{background:#ebe3d4;min-height:550px}
+.hero .hero-portrait:after{background:linear-gradient(transparent,rgba(247,244,236,.58))}
+.top-lead{background:#fdfbf7}
+@media(max-width:1100px){
+ .site-header .brand{max-width:300px;flex-basis:300px}
+ .brand .brand-logo-full{max-width:300px}
+}
+@media(max-width:800px){
+ .site-header .brand{max-width:none;flex-basis:auto}
+ .brand .brand-logo-full{display:none!important}
+ .brand .brand-logo-mobile{display:flex;align-items:center;gap:9px;min-width:0;direction:rtl}
+ .brand-logo-mobile img{width:44px;height:43px;object-fit:contain;flex:0 0 44px}
+ .brand-logo-mobile span{display:flex;flex-direction:column;gap:1px;white-space:nowrap}
+ .brand-logo-mobile strong{font-size:clamp(18px,4vw,23px);line-height:1.15;color:#40583c}
+ .brand-logo-mobile small{font-size:clamp(10px,2.5vw,12px);line-height:1.2;color:#52614d}
+ .hero .hero-intro{padding:32px 21px 28px;text-align:center}
+ .hero .hero-eyebrow{font-size:12px}
+ .hero h1{font-size:clamp(29px,7vw,39px);line-height:1.28}
+ .hero .hero-copy{text-align:center;font-size:16px;line-height:1.6;margin-inline:auto}
+ .hero .hero-offer{align-items:center;text-align:center;padding:11px 13px;margin:0 auto 20px;border-right:0;border-top:3px solid #9e865a;max-width:420px}
+ .hero .hero-offer strong{font-size:18px}
+ .hero .hero-offer span{font-size:15px}
+ .hero .hero-actions{justify-content:center}
+ .hero .hero-portrait{min-height:300px}
+}
+@media(max-width:390px){.brand-logo-mobile img{width:37px;height:37px;flex-basis:37px}.brand-logo-mobile strong{font-size:18px}.brand-logo-mobile small{font-size:10px}.hero .hero-actions .button{width:100%}}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
-<a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><div aria-hidden="true" class="brand-icon">YM</div><div class="brand-label"><strong>ירון מויאל</strong><span>משרד עורכי דין | רשלנות רפואית ונזקי גוף</span></div></a>
+<a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-logo-full" src="assets/yaron-logo-original.svg" alt="משרד עורכי דין ירון מויאל — רשלנות רפואית ונזקי גוף" width="498" height="67"/><span class="brand-logo-mobile"><img src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span><strong>ירון מויאל</strong><small>רשלנות רפואית ונזקי גוף</small></span></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
 <div class="header-socials" aria-label="רשתות חברתיות ויצירת קשר"><a href="https://www.facebook.com/wdYrwnMwylRslnwtRpwyt" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק של משרד עורכי דין ירון מויאל" title="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a><a href="https://il.linkedin.com/in/yaronmoyal" target="_blank" rel="noopener noreferrer" aria-label="לינקדאין של ירון מויאל" title="לינקדאין"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.85 0 1.55-.68 1.55-1.52V3.52c0-.84-.7-1.52-1.55-1.52zM7.93 18.75H5.3V10.2h2.63v8.55zM6.62 9.04a1.52 1.52 0 1 1 0-3.04 1.52 1.52 0 0 1 0 3.04zM18.75 18.75h-2.63v-4.16c0-.99-.02-2.27-1.38-2.27-1.38 0-1.6 1.08-1.6 2.2v4.23h-2.62V10.2h2.52v1.17h.04a2.77 2.77 0 0 1 2.49-1.36c2.66 0 3.18 1.75 3.18 4.03v4.71z"/></svg></a><a href="tel:025662662" aria-label="התקשרו למשרד: 02-5662662" title="התקשרו למשרד"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.13.94.37 1.86.71 2.73a2 2 0 0 1-.45 2.11L9.1 10.9a16 16 0 0 0 4 4l1.34-1.24a2 2 0 0 1 2.11-.45c.87.34 1.79.58 2.73.71A2 2 0 0 1 22 16.92z"/></svg></a></div>
 <details class="mobile-menu"><summary aria-label="פתיחת תפריט ניווט" class="menu-toggle"><span aria-hidden="true" class="menu-open-icon">☰</span><span aria-hidden="true" class="menu-close-icon">×</span></summary><nav aria-label="ניווט באתר" class="nav-mobile" id="navMobile"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום שיחת ייעוץ</a><div class="mobile-menu-socials" aria-label="רשתות חברתיות ויצירת קשר"><a href="https://www.facebook.com/wdYrwnMwylRslnwtRpwyt" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק של משרד עורכי דין ירון מויאל" title="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a><a href="https://il.linkedin.com/in/yaronmoyal" target="_blank" rel="noopener noreferrer" aria-label="לינקדאין של ירון מויאל" title="לינקדאין"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.85 0 1.55-.68 1.55-1.52V3.52c0-.84-.7-1.52-1.55-1.52zM7.93 18.75H5.3V10.2h2.63v8.55zM6.62 9.04a1.52 1.52 0 1 1 0-3.04 1.52 1.52 0 0 1 0 3.04zM18.75 18.75h-2.63v-4.16c0-.99-.02-2.27-1.38-2.27-1.38 0-1.6 1.08-1.6 2.2v4.23h-2.62V10.2h2.52v1.17h.04a2.77 2.77 0 0 1 2.49-1.36c2.66 0 3.18 1.75 3.18 4.03v4.71z"/></svg></a><a href="tel:025662662" aria-label="התקשרו למשרד: 02-5662662" title="התקשרו למשרד"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.13.94.37 1.86.71 2.73a2 2 0 0 1-.45 2.11L9.1 10.9a16 16 0 0 0 4 4l1.34-1.24a2 2 0 0 1 2.11-.45c.87.34 1.79.58 2.73.71A2 2 0 0 1 22 16.92z"/></svg></a></div></nav></details>
-</div></header><main id="main-content"><section class="hero marble" id="home"><div class="hero-intro"><h1>עורך דין לרשלנות רפואית ונזקי גוף</h1><p class="hero-nameline"><span class="hero-name">ירון מויאל</span><span class="hero-sub"> | ייצוג משפטי מקצועי, אישי ומדויק</span></p><div aria-hidden="true" class="ornament"><i></i><span></span><i></i></div><p class="hero-copy">נפגעתם עקב רשלנות רפואית או נזק גוף?<br/>חשוב לפעול נכון, בזמן ובליווי משפטי מנוסה כבר מהשלב הראשון.</p><div class="hero-actions"><a class="button" href="#contact">תאמו איתי שיחת ייעוץ ←</a><a class="button blue" href="tel:025662662"><span dir="ltr">02-5662662</span> ☎</a></div></div><div class="hero-portrait"><img alt="עו״ד ירון מויאל" fetchpriority="high" loading="eager" src="assets/yaron-portrait-sharper.svg"/></div></section><section class="top-lead" aria-labelledby="lead-title">
+</div></header><main id="main-content"><section class="hero marble" id="home"><div class="hero-intro"><p class="hero-eyebrow">משרד עורכי דין ירון מויאל · רשלנות רפואית ונזקי גוף</p><h1>נפגעתם מרשלנות רפואית?<span>אנחנו כאן כדי להילחם על הזכויות שלכם.</span></h1><p class="hero-copy">משרד בוטיק עם 30 שנות ניסיון, ליווי אישי וניסיון בניהול תיקים מורכבים.</p><div class="hero-offer"><strong>ייעוץ ראשוני חינם וללא התחייבות</strong><span>שכר טרחה רק במקרה של זכייה</span></div><div class="hero-actions"><a class="button" href="#leadform-top">לתיאום ייעוץ ראשוני ללא עלות ←</a><a class="button blue" href="tel:025662662"><span dir="ltr">02-5662662</span> ☎</a></div></div><div class="hero-portrait"><img alt="עו״ד ירון מויאל" fetchpriority="high" loading="eager" src="assets/yaron-portrait-sharper.svg"/></div></section><section class="top-lead" aria-labelledby="lead-title">
 <div class="top-lead-inner">
 <div class="top-lead-copy"><h2 id="lead-title">תאמו איתי שיחת ייעוץ</h2><p>השאירו פרטים ונחזור אליכם לתיאום שיחה ראשונית.</p></div>
 <form class="top-lead-form" id="leadform-top">
