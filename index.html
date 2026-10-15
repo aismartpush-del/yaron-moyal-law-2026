@@ -403,6 +403,14 @@ body{background:var(--cream);color:var(--text)}
  #home.hero .hero-intro{padding:17px 16px 21px!important}
  #home.hero .hero-intro h1{font-size:25px}
 }
+
+/* Preserve the entire interim portrait on mobile. Do not crop or alter the photo or copy. */
+@media(max-width:800px){
+ #home.hero .hero-portrait{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;order:0!important;position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;flex:0 0 auto!important;overflow:visible!important;padding:16px 18px 0!important;background:#f7f4ed!important}
+ #home.hero .hero-portrait img{display:block!important;position:relative!important;inset:auto!important;width:auto!important;height:auto!important;max-width:min(70vw,270px)!important;max-height:335px!important;object-fit:contain!important;object-position:center center!important;box-shadow:0 5px 24px rgba(32,43,34,.13);opacity:1!important}
+ #home.hero .hero-portrait::after{display:none!important;content:none!important}
+ #home.hero .hero-intro{order:1!important;margin:0!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
