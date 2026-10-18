@@ -2219,7 +2219,293 @@ html body section#about .about-office-feature .about-credentials-icon svg{
   html body section#about .about-office-feature{padding:14px!important}
 }
 
-</style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
+
+/* Mobile hero repair 2026-10-18: show portrait AND approved copy above the fold.
+   Replaces excessive 1220px photo hero / 590px top padding. Desktop stays intact. */
+@media (max-width:800px){
+  html body .site-header{
+    height:76px!important;
+    min-height:76px!important;
+    position:relative!important;
+    top:auto!important;
+  }
+  html body .site-header .header-container{
+    box-sizing:border-box!important;
+    height:76px!important;
+    min-height:76px!important;
+    padding:0 13px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:8px!important;
+  }
+  html body .site-header .brand{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    width:auto!important;
+    max-width:calc(100% - 72px)!important;
+    margin:0 auto!important;
+    gap:8px!important;
+  }
+  html body .site-header .brand .brand-mark{
+    display:block!important;
+    width:35px!important;
+    height:35px!important;
+    max-width:35px!important;
+    flex:0 0 35px!important;
+    filter:brightness(0) invert(1)!important;
+    mix-blend-mode:normal!important;
+    background:none!important;
+  }
+  html body .site-header .brand-wordmark{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    text-align:center!important;
+    min-width:0!important;
+    gap:1px!important;
+  }
+  html body .site-header .brand-wordmark strong{
+    color:#fffdf6!important;
+    font-size:clamp(19px,5.1vw,25px)!important;
+    line-height:1.13!important;
+    white-space:nowrap!important;
+  }
+  html body .site-header .brand-wordmark small{
+    color:#e7decf!important;
+    font-size:clamp(8px,2.1vw,10px)!important;
+    line-height:1.3!important;
+    white-space:normal!important;
+  }
+  html body .site-header .mobile-menu{
+    position:absolute!important;
+    top:50%!important;
+    right:13px!important;
+    left:auto!important;
+    margin:0!important;
+    transform:translateY(-50%)!important;
+    z-index:30!important;
+  }
+  html body .site-header .menu-toggle{
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:42px!important;
+    height:42px!important;
+    font-size:25px!important;
+    line-height:1!important;
+    border-radius:10px!important;
+  }
+  html body #home.clean-hero{
+    box-sizing:border-box!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+    align-items:stretch!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0!important;
+    overflow:hidden!important;
+    isolation:isolate!important;
+    color:#fffdf7!important;
+    background:radial-gradient(ellipse at 0% 0%,rgba(93,146,104,.23),transparent 65%),linear-gradient(140deg,#355441 0%,#213e30 55%,#192f27 100%)!important;
+  }
+  html body #home.clean-hero:before{
+    display:none!important;
+    content:none!important;
+  }
+  html body #home.clean-hero .clean-hero-photo{
+    box-sizing:border-box!important;
+    display:block!important;
+    position:relative!important;
+    inset:auto!important;
+    top:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    left:auto!important;
+    z-index:1!important;
+    width:100%!important;
+    height:clamp(228px,33svh,310px)!important;
+    min-height:0!important;
+    max-height:310px!important;
+    flex:0 0 clamp(228px,33svh,310px)!important;
+    overflow:hidden!important;
+    background:#e5e0d7!important;
+  }
+  html body #home.clean-hero .clean-hero-photo img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:50% 43%!important;
+    transform:none!important;
+  }
+  html body #home.clean-hero .clean-hero-photo:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background:linear-gradient(180deg,transparent 70%,rgba(27,50,37,.46) 100%);
+  }
+  html body #home.clean-hero .clean-hero-content{
+    position:relative!important;
+    z-index:2!important;
+    direction:rtl!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:center!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:600px!important;
+    min-width:0!important;
+    height:auto!important;
+    flex:0 0 auto!important;
+    gap:10px!important;
+    margin:0 auto!important;
+    padding:23px 20px 19px!important;
+    text-align:center!important;
+    background:transparent!important;
+    transform:none!important;
+  }
+  html body #home.clean-hero .clean-hero-eyebrow{
+    color:#ebce8d!important;
+    font-size:clamp(11px,2.9vw,13px)!important;
+    line-height:1.42!important;
+    font-weight:750!important;
+    margin:0!important;
+  }
+  html body #home.clean-hero h1{
+    color:#fff!important;
+    font-size:clamp(29px,7.45vw,39px)!important;
+    font-weight:900!important;
+    line-height:1.12!important;
+    letter-spacing:-.025em!important;
+    text-align:center!important;
+    max-width:100%!important;
+    margin:0!important;
+    text-shadow:0 2px 15px rgba(0,0,0,.18)!important;
+  }
+  html body #home.clean-hero h1 span{
+    display:block!important;
+    color:#fff7e8!important;
+    font-size:.64em!important;
+    font-weight:800!important;
+    line-height:1.3!important;
+    margin-top:8px!important;
+  }
+  html body #home.clean-hero .clean-hero-copy{
+    max-width:540px!important;
+    color:#e9ebe4!important;
+    font-size:clamp(14px,3.7vw,17px)!important;
+    line-height:1.45!important;
+    margin:0!important;
+    text-align:center!important;
+  }
+  html body #home.clean-hero .clean-hero-offer{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    gap:3px!important;
+    margin:2px 0 0!important;
+    color:#fffdf5!important;
+    font-size:clamp(13px,3.4vw,15px)!important;
+    line-height:1.35!important;
+    text-align:center!important;
+  }
+  html body #home.clean-hero .clean-hero-offer strong{
+    color:#e7c77e!important;
+    font-weight:850!important;
+  }
+  html body #home.clean-hero .clean-hero-actions{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,.68fr)!important;
+    gap:10px!important;
+    align-items:stretch!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:540px!important;
+    margin:9px 0 0!important;
+  }
+  html body #home.clean-hero .clean-hero-actions .button{
+    display:flex!important;
+    flex:initial!important;
+    align-items:center!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:51px!important;
+    padding:10px!important;
+    border:1px solid #d9b870!important;
+    border-radius:12px!important;
+    background:linear-gradient(115deg,#b79655 0%,#e0c081 100%)!important;
+    color:#243d2c!important;
+    font-size:clamp(12px,3.1vw,15px)!important;
+    font-weight:850!important;
+    line-height:1.3!important;
+    text-align:center!important;
+    white-space:normal!important;
+    box-shadow:0 5px 16px rgba(11,27,17,.22)!important;
+  }
+  html body #home.clean-hero .clean-hero-actions .button.blue{
+    color:#fffef6!important;
+    background:rgba(255,255,255,.08)!important;
+    border:1px solid rgba(255,255,255,.55)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:600px!important;
+    margin:0 auto!important;
+    padding:12px 12px 17px!important;
+    gap:0!important;
+    text-align:center!important;
+    background:rgba(0,0,0,.12)!important;
+    border-top:1px solid rgba(223,196,138,.23)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof>div{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:5px!important;
+    padding:4px 7px!important;
+  }
+  html body #home.clean-hero .clean-hero-proof strong{
+    font-size:clamp(13px,3.65vw,17px)!important;
+    line-height:1.2!important;
+    color:#e4c37e!important;
+  }
+  html body #home.clean-hero .clean-hero-proof span{
+    font-size:clamp(9px,2.6vw,12px)!important;
+    line-height:1.35!important;
+    color:#fffdf5!important;
+  }
+}
+@media(max-width:360px){
+  html body #home.clean-hero .clean-hero-photo{
+    height:220px!important;
+    flex-basis:220px!important;
+  }
+  html body #home.clean-hero .clean-hero-content{padding:19px 15px 16px!important}
+  html body #home.clean-hero .clean-hero-actions{
+    grid-template-columns:1fr!important;
+  }
+}
+
+</style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
 <div class="header-socials" aria-label="רשתות חברתיות ויצירת קשר"><a href="https://www.facebook.com/wdYrwnMwylRslnwtRpwyt" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק של משרד עורכי דין ירון מויאל" title="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a><a href="https://il.linkedin.com/in/yaronmoyal" target="_blank" rel="noopener noreferrer" aria-label="לינקדאין של ירון מויאל" title="לינקדאין"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.85 0 1.55-.68 1.55-1.52V3.52c0-.84-.7-1.52-1.55-1.52zM7.93 18.75H5.3V10.2h2.63v8.55zM6.62 9.04a1.52 1.52 0 1 1 0-3.04 1.52 1.52 0 0 1 0 3.04zM18.75 18.75h-2.63v-4.16c0-.99-.02-2.27-1.38-2.27-1.38 0-1.6 1.08-1.6 2.2v4.23h-2.62V10.2h2.52v1.17h.04a2.77 2.77 0 0 1 2.49-1.36c2.66 0 3.18 1.75 3.18 4.03v4.71z"/></svg></a><a href="tel:025662662" aria-label="התקשרו למשרד: 02-5662662" title="התקשרו למשרד"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.13.94.37 1.86.71 2.73a2 2 0 0 1-.45 2.11L9.1 10.9a16 16 0 0 0 4 4l1.34-1.24a2 2 0 0 1 2.11-.45c.87.34 1.79.58 2.73.71A2 2 0 0 1 22 16.92z"/></svg></a></div>
