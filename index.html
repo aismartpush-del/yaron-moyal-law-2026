@@ -2560,6 +2560,116 @@ html body section#about .about-office-feature .about-credentials-icon svg{
   }
 }
 
+
+/* Mobile-only hero: warm stone editorial treatment, restrained green accents.
+   Keeps Yaron portrait natural and softly dissolves it into the copy. */
+@media (max-width:800px) {
+  html body #home.clean-hero {
+    color:#263b34!important;
+    background:linear-gradient(180deg,#e3ded4 0%,#f4f0e8 68%,#f7f4ee 100%)!important;
+    box-shadow:0 11px 25px rgba(45,55,47,.07)!important;
+  }
+  html body #home.clean-hero .clean-hero-photo {
+    background:#e3ded4!important;
+  }
+  html body #home.clean-hero .clean-hero-photo::after,
+  html body #home.clean-hero .clean-hero-photo:after {
+    display:block!important;
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:2!important;
+    pointer-events:none!important;
+    background:linear-gradient(180deg,
+      rgba(227,222,212,0) 0%,
+      rgba(227,222,212,0) 66%,
+      rgba(227,222,212,.15) 80%,
+      rgba(227,222,212,.54) 92%,
+      #e3ded4 100%)!important;
+  }
+  html body #home.clean-hero .clean-hero-content {
+    margin:-13px auto 0!important;
+    padding:30px 20px 23px!important;
+    background:transparent!important;
+    color:#263b34!important;
+    gap:11px!important;
+  }
+  html body #home.clean-hero .clean-hero-eyebrow {
+    color:#927342!important;
+    font-size:clamp(11px,2.85vw,13px)!important;
+    letter-spacing:.005em!important;
+  }
+  html body #home.clean-hero h1 {
+    color:#253931!important;
+    font-size:clamp(28px,7.1vw,37px)!important;
+    text-shadow:none!important;
+    line-height:1.13!important;
+  }
+  html body #home.clean-hero h1 span {
+    color:#395246!important;
+    font-size:.62em!important;
+    line-height:1.32!important;
+    margin-top:8px!important;
+  }
+  html body #home.clean-hero .clean-hero-copy {
+    color:#4c5952!important;
+    font-size:clamp(14px,3.65vw,16px)!important;
+    line-height:1.53!important;
+  }
+  html body #home.clean-hero .clean-hero-offer {
+    color:#4a564e!important;
+    font-size:clamp(13px,3.35vw,15px)!important;
+    gap:4px!important;
+    margin-top:4px!important;
+    line-height:1.43!important;
+  }
+  html body #home.clean-hero .clean-hero-offer strong {
+    color:#8c6b35!important;
+    font-weight:850!important;
+  }
+  html body #home.clean-hero .clean-hero-actions {
+    margin-top:12px!important;
+    gap:10px!important;
+  }
+  html body #home.clean-hero .clean-hero-actions .button {
+    background:linear-gradient(120deg,#b59053,#d1b277)!important;
+    color:#24382d!important;
+    border-color:#b89557!important;
+    box-shadow:0 7px 17px rgba(90,76,48,.13)!important;
+  }
+  html body #home.clean-hero .clean-hero-actions .button.blue {
+    background:rgba(255,255,252,.77)!important;
+    color:#2a3c35!important;
+    border:1px solid rgba(75,95,79,.55)!important;
+    box-shadow:0 4px 12px rgba(70,79,66,.07)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof {
+    background:transparent!important;
+    border-top:1px solid rgba(174,151,114,.30)!important;
+    padding:13px 12px 19px!important;
+    gap:8px!important;
+  }
+  html body #home.clean-hero .clean-hero-proof>div {
+    background:rgba(255,255,255,.62)!important;
+    border:1px solid rgba(192,174,142,.32)!important;
+    border-radius:13px!important;
+    padding:12px 5px!important;
+    min-width:0!important;
+    box-shadow:0 3px 11px rgba(51,62,54,.045)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof strong {
+    color:#344b3f!important;
+    font-size:clamp(12px,3.4vw,16px)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof span {
+    color:#59665e!important;
+    font-size:clamp(9px,2.55vw,12px)!important;
+  }
+}
+@media (max-width:360px) {
+  html body #home.clean-hero .clean-hero-content {padding:28px 15px 20px!important}
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
