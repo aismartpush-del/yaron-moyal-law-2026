@@ -1014,4 +1014,37 @@ if (demoForm) demoForm.addEventListener('submit', event => {
   counters.forEach(el=>observer.observe(el));
  }else counters.forEach(animate);
 })();
+
+(function(){
+const elements=document.querySelectorAll('.money-counter[data-target]');
+if(!elements.length)return;
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function animate(el){
+if(el.dataset.animated)return;
+el.dataset.animated='true';
+if(reduced)return;
+const digits=el.querySelector('span');
+const amount=Number(el.dataset.target);
+const decimals=amount%1===0?0:1;
+let startTime=null;
+function frame(now){
+if(startTime===null)startTime=now;
+const progress=Math.min(1,(now-startTime)/1800);
+const value=amount*(1-Math.pow(1-progress,3));
+digits.textContent=value.toFixed(decimals);
+if(progress<1)requestAnimationFrame(frame);
+else digits.textContent=amount.toFixed(decimals);
+}
+digits.textContent=(0).toFixed(decimals);
+requestAnimationFrame(frame);
+}
+if('IntersectionObserver' in window){
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){animate(entry.target);observer.unobserve(entry.target);}
+});
+},{threshold:0.65});
+elements.forEach(el=>observer.observe(el));
+}else elements.forEach(animate);
+})();
 </script></body></html>
