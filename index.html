@@ -972,6 +972,14 @@ body{background:#fdfbf6;color:#303f34}
 #contact .contact-copy p{line-height:1.75!important}
 }
 @media(prefers-reduced-motion:reduce){#practice .service-card,#articles .article-card,#press .media-card{transition:none!important}}
+
+/* Mobile hero: keep Yaron's face unobstructed and place all copy lower */
+@media(max-width:800px){
+.clean-hero{min-height:1220px!important;min-height:max(1220px,115svh)!important}
+.clean-hero-content{padding-top:590px!important}
+.clean-hero:before{background:linear-gradient(180deg,rgba(15,28,24,0) 0%,rgba(15,28,24,.03) 28%,rgba(15,28,24,.20) 42%,rgba(13,29,25,.87) 59%,rgba(13,29,25,.98) 100%)!important}
+}
+@media(max-width:390px){.clean-hero{min-height:1190px!important}.clean-hero-content{padding-top:555px!important}}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
