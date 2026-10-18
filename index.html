@@ -1014,6 +1014,22 @@ html body #cases .case-card,html body #articles .article-card,html body #press .
  background:radial-gradient(ellipse at 0% 8%,rgba(134,190,154,.4),transparent 58%),linear-gradient(150deg,#557862,#345a46 55%,#1d3b30)!important}
 }
 
+
+/* Clearly perceptible color transitions — high contrast refinement */
+html body section#about,html body section#practice,html body section#cases,html body section#faq,html body section#articles,html body section#press{
+ background:linear-gradient(125deg,#fffdf7 0%,#e4d8bd 35%,#f9f6ed 62%,#dce6dc 100%)!important;
+}
+html body section#reviews,html body section#contact,html body section#why-moyal{
+ background:linear-gradient(125deg,#73947a 0%,#3f694f 33%,#254c3c 70%,#142e26 100%)!important;
+}
+html body section#about :is(.about-card,.about-text),html body section#practice :is(.practice-card,.service-card),html body section#cases :is(.case-card,.case-item),html body section#faq :is(.faq-item,.faq-card),html body section#articles :is(.article-card,.blog-card),html body section#press :is(.press-card,.media-card){
+ box-shadow:0 18px 42px rgba(32,55,40,.18)!important;
+}
+html body section#reviews :is(.review-card,.testimonial-card),html body section#contact :is(.contact-panel,.contact-card),html body section#why-moyal :is(.why-item,.why-card){
+ background:linear-gradient(120deg,rgba(255,255,255,.27),rgba(255,255,255,.10) 52%,rgba(10,35,26,.28))!important;
+ box-shadow:0 18px 38px rgba(9,28,20,.23)!important;
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
