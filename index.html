@@ -1574,6 +1574,188 @@ html body section#reviews :is(.review-card,.testimonial-card),html body section#
   html body #reviews .review-carousel-shell{width:100%!important;max-width:none!important}
 }
 
+
+/* Strong consultation ribbon / About refinement for client review */
+html body .top-lead{
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden!important;
+  background:
+    radial-gradient(ellipse at 5% 0%,rgba(200,171,112,.19),transparent 44%),
+    linear-gradient(112deg,#203e30 0%,#365a43 46%,#203b30 100%)!important;
+  border-top:3px solid rgba(202,167,101,.78)!important;
+  border-bottom:3px solid rgba(173,141,86,.5)!important;
+  padding:38px 25px 42px!important;
+  box-shadow:0 14px 38px rgba(16,36,26,.22)!important;
+}
+html body .top-lead-inner{
+  max-width:1260px!important;
+  grid-template-columns:minmax(245px,.78fr) minmax(0,2.22fr)!important;
+  align-items:center!important;
+  column-gap:38px!important;
+  row-gap:12px!important;
+}
+html body .top-lead-copy h2{
+  color:#fffdf7!important;
+  font-size:clamp(25px,2.35vw,34px)!important;
+  font-weight:850!important;
+  line-height:1.19!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.12)!important;
+}
+html body .top-lead-copy p{
+  color:#e3e9de!important;
+  font-size:clamp(14px,1.15vw,17px)!important;
+  line-height:1.65!important;
+}
+html body .top-lead-form{
+  gap:13px!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(170px,.8fr)!important;
+}
+html body .top-lead-form input{
+  box-sizing:border-box!important;
+  height:58px!important;
+  padding:15px 18px!important;
+  border:1px solid rgba(203,171,112,.7)!important;
+  border-radius:12px!important;
+  background:#fffdf7!important;
+  color:#203e30!important;
+  font-size:16px!important;
+  box-shadow:inset 0 1px 3px rgba(26,48,33,.07)!important;
+}
+html body .top-lead-form button{
+  box-sizing:border-box!important;
+  height:58px!important;
+  padding:14px 18px!important;
+  border-radius:12px!important;
+  border:1px solid #ecd39c!important;
+  background:linear-gradient(110deg,#a8824e,#cfb071 62%,#e0c58f)!important;
+  color:#183326!important;
+  font-size:clamp(14px,1.1vw,17px)!important;
+  font-weight:900!important;
+  box-shadow:0 9px 23px rgba(13,32,22,.22)!important;
+  transition:transform .2s ease,filter .2s ease!important;
+}
+html body .top-lead-form button:hover{
+  filter:brightness(1.07)!important;
+  transform:translateY(-2px)!important;
+}
+/* Balance the three components of About instead of making one tiny text column. */
+@media(min-width:1101px){
+  html body #about .wrap{
+    grid-template-columns:minmax(0,1.65fr) minmax(0,.9fr)!important;
+    column-gap:23px!important;
+  }
+  html body #about .about-card{
+    grid-template-columns:minmax(0,72%) minmax(0,28%)!important;
+    border-radius:25px!important;
+  }
+  html body #about .about-text{
+    padding:34px 31px!important;
+  }
+  html body #about .about-text p{
+    font-size:clamp(16px,1.18vw,18px)!important;
+    line-height:1.79!important;
+    margin-bottom:17px!important;
+  }
+  html body #about .about-image img{
+    object-position:center 12%!important;
+  }
+  html body #about .office-atmosphere img{
+    min-height:0!important;
+    height:100%!important;
+    object-position:40% 50%!important;
+  }
+}
+@media(min-width:801px) and (max-width:1100px){
+  html body .top-lead-inner{
+    grid-template-columns:minmax(190px,.7fr) minmax(0,2fr)!important;
+    gap:20px!important;
+  }
+  html body .top-lead-form{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  html body .top-lead-form button{grid-column:1/-1!important}
+  html body #about .about-card{
+    grid-template-columns:minmax(0,70%) minmax(0,30%)!important;
+  }
+  html body #about .about-text p{font-size:16px!important;line-height:1.76!important}
+}
+@media(max-width:800px){
+  html body .top-lead{
+    padding:28px 20px 31px!important;
+    border-radius:0!important;
+  }
+  html body .top-lead-inner{
+    display:block!important;
+    max-width:550px!important;
+  }
+  html body .top-lead-copy{
+    margin:0 auto 19px!important;
+    text-align:center!important;
+  }
+  html body .top-lead-copy h2{font-size:clamp(24px,5.6vw,30px)!important}
+  html body .top-lead-copy p{font-size:15px!important}
+  html body .top-lead-form{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  html body .top-lead-form input{height:52px!important;font-size:15px!important}
+  html body .top-lead-form button{grid-column:1/-1!important;height:54px!important}
+  html body #about .about-card{
+    width:100%!important;
+    display:flex!important;
+    flex-direction:column!important;
+    overflow:hidden!important;
+    border-radius:25px!important;
+    margin:0!important;
+  }
+  html body #about .about-image{
+    order:0!important;
+    width:100%!important;
+    height:350px!important;
+    min-height:0!important;
+  }
+  html body #about .about-image img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 18%!important;
+  }
+  html body #about .about-text{
+    order:1!important;
+    box-sizing:border-box!important;
+    padding:28px 25px!important;
+  }
+  html body #about .about-text p{
+    font-size:clamp(16px,4.3vw,19px)!important;
+    line-height:1.78!important;
+  }
+  html body #about .office-atmosphere{
+    margin:0 0 20px!important;
+    overflow:hidden!important;
+    border-radius:24px!important;
+  }
+  html body #about .office-atmosphere img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:1.7!important;
+    object-fit:cover!important;
+  }
+  html body #about .about-facts{
+    grid-template-columns:1fr!important;
+    gap:13px!important;
+  }
+}
+@media(max-width:390px){
+  html body .top-lead-form{grid-template-columns:1fr!important}
+  html body .top-lead-form button{grid-column:1!important}
+  html body #about .about-image{height:315px!important}
+  html body #about .about-text{padding:25px 20px!important}
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
