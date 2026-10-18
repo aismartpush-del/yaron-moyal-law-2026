@@ -850,6 +850,24 @@ body{background:#fdfbf6;color:#303f34}
  #home.hero>.reference-proof-band{display:grid!important;position:relative!important;float:none!important;order:unset!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;height:auto!important;min-height:0!important;margin:0!important;padding:15px 8px 25px!important;background:#293e31!important;z-index:auto!important}
  .site-header .brand .brand-mark{filter:none!important;mix-blend-mode:screen!important;background:transparent!important}
 }
+
+/* Unified mobile photo hero: portrait and copy share one uninterrupted image. */
+@media(max-width:800px){
+ #home.hero{display:flex!important;flex-direction:column!important;position:relative!important;isolation:isolate!important;min-height:1080px!important;height:auto!important;overflow:hidden!important;background:#293e31!important}
+ #home.hero>.hero-portrait{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;z-index:0!important;pointer-events:none!important;overflow:hidden!important}
+ #home.hero>.hero-portrait img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top!important}
+ #home.hero::before{display:block!important;content:""!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(to bottom,rgba(19,31,27,.03) 0%,rgba(19,31,27,.12) 24%,rgba(19,31,27,.57) 47%,rgba(12,28,24,.93) 72%,rgba(12,28,24,.98) 100%)!important;pointer-events:none!important}
+ #home.hero>.hero-intro{position:relative!important;z-index:2!important;order:1!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-end!important;flex:1 0 auto!important;width:100%!important;min-height:0!important;margin:0!important;padding:450px 20px 20px!important;background:transparent!important;text-align:center!important}
+ #home.hero>.hero-intro .hero-eyebrow{font-size:12px!important;line-height:1.4!important;margin:0 auto 8px!important}
+ #home.hero>.hero-intro h1{font-size:clamp(32px,8vw,43px)!important;line-height:1.2!important;margin:8px auto 12px!important}
+ #home.hero>.hero-intro h1 span{font-size:.7em!important;margin-top:10px!important}
+ #home.hero>.hero-intro .hero-copy{font-size:clamp(16px,4vw,20px)!important;line-height:1.5!important;margin:9px auto!important}
+ #home.hero>.hero-intro .hero-offer{font-size:14px!important;margin:7px auto!important}
+ #home.hero>.hero-intro .hero-actions{margin:18px auto 0!important;gap:11px!important}
+ #home.hero>.reference-proof-band{position:relative!important;z-index:2!important;order:2!important;flex:0 0 auto!important;width:100%!important;margin:0!important;padding:16px 9px 24px!important;background:transparent!important}
+ .site-header .brand .brand-mark{filter:none!important;mix-blend-mode:screen!important}
+}
+@media(max-width:390px){#home.hero{min-height:1040px!important}#home.hero>.hero-intro{padding-top:410px!important}}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
