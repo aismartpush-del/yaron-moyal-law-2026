@@ -501,6 +501,76 @@ body{background:var(--cream);color:var(--text)}
  #home.hero .hero-portrait img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;object-fit:contain!important;object-position:center!important;box-shadow:none!important;border:0!important}
  #home.hero .hero-intro{margin:0!important;order:1!important}
 }
+
+/* 2026 reference-led redesign: Ron-Festinger visual hierarchy, Yaron's original content and branding. */
+:root{--blue:#40583c;--navy:#293e31;--gold:#a88c65;--muted-gold:#c5b395;--cream:#f5f2e9;--paper:#fdfbf6;--line:#d4c8b5;--text:#303f34;--shadow:0 16px 42px rgba(41,62,49,.09)}
+body{background:#fdfbf6;color:#303f34}
+#home.hero{background:#f3f0e8!important;min-height:620px!important;max-width:none;overflow:hidden;box-shadow:none}
+#home.hero .hero-intro{position:relative;z-index:1;align-self:center;padding:clamp(35px,5vw,86px) clamp(28px,6vw,110px)!important;background:transparent!important}
+#home.hero .hero-eyebrow{font-size:14px!important;letter-spacing:.04em;color:#58705a!important;font-weight:750}
+#home.hero h1{font-size:clamp(39px,4.1vw,69px)!important;line-height:1.13!important;letter-spacing:-.04em!important;color:#293e31!important;max-width:720px}
+#home.hero h1 span{display:block;margin-top:10px;font-size:.66em;line-height:1.25;color:#40583c}
+#home.hero .hero-copy{font-size:clamp(17px,1.4vw,22px)!important;line-height:1.75;max-width:590px;color:#4e5d50}
+#home.hero .hero-offer{background:#fffdf9;border-right:4px solid #a88c65;box-shadow:0 8px 30px rgba(41,62,49,.07);padding:17px 22px;border-radius:8px}
+#home.hero .hero-actions{gap:13px;flex-wrap:wrap}
+#home.hero .hero-actions .button{border-radius:5px!important;box-shadow:none;font-weight:800}
+#home.hero .hero-portrait{background:#e6e0d4!important}
+#home.hero .hero-portrait img{object-position:center 22%!important}
+#home.hero .hero-portrait::after{display:none!important}
+#why-moyal.trust{background:#40583c!important;padding:42px 22px 46px!important}
+#why-moyal .why-moyal-list{max-width:1230px;margin:auto;gap:16px}
+#why-moyal .why-moyal-item{background:#fdfbf6!important;border:1px solid #c5b395!important;border-radius:9px!important;box-shadow:0 9px 24px rgba(0,0,0,.08)!important}
+#why-moyal .why-moyal-icon{border-radius:8px!important;background:#e8ede5!important}
+.block{padding-top:clamp(64px,7vw,112px)!important;padding-bottom:clamp(64px,7vw,112px)!important}
+.block .wrap{max-width:1240px}
+.block .section-heading{margin-bottom:43px}
+.block .section-heading h2{font-size:clamp(32px,3.5vw,52px)!important;font-weight:900;letter-spacing:-.035em;color:#293e31}
+.block .section-heading p{font-size:clamp(16px,1.5vw,20px);line-height:1.65}
+.block .section-heading .ornament{opacity:.55}
+#practice{background:#fff!important}
+#practice .service-grid{gap:20px}
+#practice .service-card{border-radius:8px!important;padding:32px 27px!important;border:1px solid #e2ded5!important;box-shadow:0 8px 32px rgba(41,62,49,.06)!important;transition:transform .2s,box-shadow .2s}
+#practice .service-card:hover{transform:translateY(-5px);box-shadow:0 17px 38px rgba(41,62,49,.12)!important}
+#practice .medallion{border-radius:50%!important;background:#edf0e9!important}
+#practice .medallion-inner{border-radius:50%!important}
+#practice .service-card h3{font-size:clamp(21px,1.8vw,26px)!important}
+#cases{background:#40583c!important}
+#cases .section-heading h2,#cases .section-heading p{color:#fffdf6!important}
+#cases .article-card{background:#fdfbf6!important;border-radius:8px!important;border:1px solid #c5b395!important;box-shadow:0 12px 32px rgba(0,0,0,.13)!important}
+#cases .case-figure{font-size:clamp(29px,3vw,42px)!important;color:#40583c!important;font-weight:900}
+#about{background:#f5f2e9!important}
+#about .about-card{border-radius:9px!important;box-shadow:0 15px 45px rgba(41,62,49,.08)!important}
+#about .office-atmosphere{border-radius:8px!important;overflow:hidden}
+#articles{background:#fff!important}
+#articles .article-card,#press .article-card{border-radius:8px!important;box-shadow:0 8px 28px rgba(41,62,49,.07)!important}
+#reviews{background:#f5f2e9!important}
+#reviews .review-card{background:#fff!important;border-radius:8px!important;border-top:4px solid #a88c65!important}
+#press{background:#fff!important}
+#press .press-publication{border-radius:8px!important}
+#faq{background:#f5f2e9!important}
+#faq .faq-shell{max-width:1000px;margin:auto}
+#faq .faq-item{background:#fff!important;border-radius:7px!important;margin-bottom:12px;box-shadow:0 4px 17px rgba(41,62,49,.04)}
+#contact{background:#40583c!important}
+#contact .section-heading h2{color:#fffdf6!important}
+#contact .contact-card{background:#fffdf9!important;border-radius:9px!important;box-shadow:0 16px 40px rgba(0,0,0,.12)!important}
+.top-lead{background:#eae4d7!important;border-block:1px solid #d4c8b5!important}
+.site-footer{background:#293e31!important}
+@media(max-width:800px){
+ #home.hero{min-height:0!important;background:#f5f2e9!important}
+ #home.hero .hero-portrait{padding:0!important;margin:0!important;min-height:0!important;height:auto!important;overflow:hidden!important}
+ #home.hero .hero-portrait img{position:relative!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;box-shadow:none!important}
+ #home.hero .hero-intro{padding:29px 23px 39px!important;margin:0!important;text-align:right}
+ #home.hero h1{font-size:clamp(31px,7vw,43px)!important;line-height:1.22!important}
+ #home.hero .hero-copy{font-size:17px!important}
+ #home.hero .hero-actions{display:flex;flex-direction:column}
+ #home.hero .hero-actions .button{width:100%!important}
+ #why-moyal.trust{padding:30px 17px!important}
+ #why-moyal .why-moyal-item{border-radius:8px!important}
+ .block{padding:55px 0!important}
+ .block .section-heading{margin-bottom:29px}
+ .block .section-heading h2{font-size:clamp(29px,7vw,39px)!important}
+ #practice .service-card{padding:24px 20px!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
