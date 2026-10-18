@@ -2505,6 +2505,61 @@ html body section#about .about-office-feature .about-credentials-icon svg{
   }
 }
 
+
+/* Seamless mobile opening and logo restoration — approved content unchanged. */
+@media(max-width:800px){
+  /* The source mark contains its own colours; the former invert filter made it a white square. */
+  html body .site-header .brand .brand-mark{
+    filter:none!important;
+    -webkit-filter:none!important;
+    mix-blend-mode:normal!important;
+    background:transparent!important;
+    object-fit:contain!important;
+  }
+
+  /* Blend the bottom of the portrait into the brand green, rather than a hard image/section seam. */
+  html body #home.clean-hero{
+    background:linear-gradient(180deg,#294735 0%,#213d2f 74%,#1c3529 100%)!important;
+  }
+  html body #home.clean-hero .clean-hero-photo{
+    position:relative!important;
+    overflow:hidden!important;
+    background:#294735!important;
+  }
+  html body #home.clean-hero .clean-hero-photo img{
+    object-position:50% 32%!important;
+  }
+  html body #home.clean-hero .clean-hero-photo::after{
+    display:block!important;
+    content:""!important;
+    position:absolute!important;
+    z-index:2!important;
+    inset:0!important;
+    pointer-events:none!important;
+    background:linear-gradient(180deg,
+      rgba(41,71,53,0) 0%,
+      rgba(41,71,53,0) 49%,
+      rgba(41,71,53,.10) 63%,
+      rgba(41,71,53,.48) 79%,
+      rgba(41,71,53,.82) 91%,
+      #294735 100%)!important;
+  }
+  html body #home.clean-hero .clean-hero-content{
+    z-index:3!important;
+    margin:-24px auto 0!important;
+    padding:36px 20px 20px!important;
+    background:linear-gradient(180deg,rgba(41,71,53,0),rgba(41,71,53,.35) 24px,transparent 60px)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof{
+    background:rgba(10,29,20,.16)!important;
+  }
+}
+@media(max-width:360px){
+  html body #home.clean-hero .clean-hero-content{
+    padding:33px 15px 17px!important;
+  }
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
