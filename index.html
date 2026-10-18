@@ -673,6 +673,23 @@ body{background:#fdfbf6;color:#303f34}
  #home.hero .reference-proof-band span{font-size:11px!important;line-height:1.35!important}
 }
 @media(max-width:380px){#home.hero .hero-intro{padding:24px 17px 8px!important}#home.hero h1{font-size:31px!important}#home.hero .hero-actions .button{min-height:53px!important}#home.hero .reference-proof-band{padding-bottom:15px!important}}
+
+/* Critical hero visibility repair: image and gradient must sit above section background. */
+#home.hero{isolation:isolate!important;position:relative!important;background:#293e31!important}
+#home.hero .hero-portrait{z-index:0!important;pointer-events:none!important;opacity:1!important;visibility:visible!important}
+#home.hero .hero-portrait img{display:block!important;opacity:1!important;visibility:visible!important}
+#home.hero::before{z-index:1!important;pointer-events:none!important}
+#home.hero .hero-intro,#home.hero .reference-proof-band{z-index:2!important}
+.site-header .brand-mark{filter:none!important;background:transparent!important}
+@media(max-width:800px){
+ .site-header .brand-mark{display:none!important}
+ .site-header .header-socials{display:none!important}
+ .site-header .brand{max-width:calc(100% - 100px)!important}
+ .site-header .brand-wordmark{width:100%!important}
+ #home.hero .hero-portrait{z-index:0!important}
+ #home.hero::before{z-index:1!important}
+ #home.hero .hero-intro,#home.hero .reference-proof-band{z-index:2!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
