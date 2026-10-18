@@ -771,6 +771,24 @@ body{background:#fdfbf6;color:#303f34}
  #home.hero .reference-proof-band span{font-size:11px!important}
 }
 @media(max-width:400px){#home.hero{min-height:860px!important}#home.hero h1{font-size:32px!important}#home.hero .hero-actions .button{min-height:54px!important}}
+
+/* Verified against supplied mobile screenshots: no text may cover Yaron's face. */
+@media(max-width:800px){
+ .site-header .brand .brand-mark{display:block!important;filter:grayscale(1) contrast(1.65)!important;mix-blend-mode:multiply!important;background:transparent!important;width:44px!important;height:44px!important;flex:0 0 44px!important;opacity:1!important}
+ #home.hero{display:flex!important;flex-direction:column!important;justify-content:flex-start!important;min-height:0!important;height:auto!important;overflow:visible!important;background:#293e31!important}
+ #home.hero::before{display:none!important;content:none!important}
+ #home.hero .hero-portrait{position:relative!important;inset:auto!important;display:block!important;order:0!important;flex:0 0 auto!important;z-index:0!important;width:100%!important;height:clamp(360px,115vw,580px)!important;min-height:0!important;overflow:hidden!important;background:#ded9cf!important}
+ #home.hero .hero-portrait img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center 12%!important}
+ #home.hero .hero-intro{position:relative!important;order:1!important;z-index:2!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;width:100%!important;margin:0!important;padding:27px 21px 22px!important;background:#293e31!important;text-align:center!important}
+ #home.hero .hero-eyebrow{color:#d7b977!important;font-size:12px!important}
+ #home.hero h1{color:white!important;font-size:clamp(32px,8vw,43px)!important;line-height:1.2!important;margin:13px auto!important}
+ #home.hero h1 span{color:white!important;font-size:.7em!important;margin-top:12px!important}
+ #home.hero .hero-copy{color:white!important;font-size:clamp(16px,4vw,20px)!important;margin:10px auto 13px!important}
+ #home.hero .hero-offer{color:white!important}
+ #home.hero .hero-actions{margin:20px auto 0!important}
+ #home.hero .reference-proof-band{order:2!important;position:relative!important;z-index:2!important;display:grid!important;background:#293e31!important;padding:16px 10px 27px!important}
+ .contact-float{display:none!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
