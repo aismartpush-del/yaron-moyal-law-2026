@@ -931,6 +931,41 @@ body{background:#fdfbf6;color:#303f34}
 #faq .faq-item[open]{background:#fffdf7!important;box-shadow:0 12px 28px rgba(24,58,42,.1)!important}
 #contact .contact-card{box-shadow:0 20px 55px rgba(10,32,26,.27)!important}
 @media(prefers-reduced-motion:reduce){.service-card,.article-card,.review-card{transition:none!important}}
+
+/* Reference-aligned structural redesign, keeping all original content */
+#why-moyal{background:linear-gradient(120deg,#1a302b,#315543 54%,#18352e)!important;position:relative;overflow:hidden}
+#why-moyal:before{content:"";position:absolute;width:480px;height:480px;left:-240px;top:-150px;border-radius:50%;background:radial-gradient(circle,rgba(201,171,109,.12),transparent 70%);pointer-events:none}
+#why-moyal .why-moyal-item{background:rgba(255,255,255,.07)!important;border:1px solid rgba(241,230,204,.22)!important;border-radius:28px!important;box-shadow:0 14px 38px rgba(8,24,18,.14)!important}
+#why-moyal .why-moyal-copy{color:#f9f7ef!important}
+#why-moyal .why-moyal-icon{color:#d7b878!important}
+#cases{background:linear-gradient(145deg,#faf9f5,#f0eee6)!important}
+#cases .cards-grid{gap:26px!important}
+#cases .result-card{border-radius:30px!important;padding:35px 29px!important;background:linear-gradient(150deg,#fff,#f8f6ef)!important;border:1px solid rgba(169,147,106,.18)!important;box-shadow:0 15px 40px rgba(29,52,42,.09)!important}
+#cases .result-card .case-figure{font-size:clamp(30px,5vw,54px)!important;line-height:1.18!important;color:#ae8a50!important}
+#cases .result-card h3{font-size:clamp(20px,2.5vw,28px)!important;line-height:1.3!important}
+#cases .result-card .case-bottom{border-top:1px solid rgba(173,153,112,.3)!important;padding-top:18px!important}
+#reviews{background:linear-gradient(125deg,#1d322d,#334d40 52%,#1c312b)!important}
+#reviews .section-heading h2{color:#fff!important}
+#reviews .section-heading p{color:#e9e5d8!important}
+#reviews .review-card{background:rgba(255,255,255,.09)!important;border:1px solid rgba(255,255,255,.2)!important;border-radius:30px!important;box-shadow:0 20px 42px rgba(8,24,18,.14)!important}
+#reviews .review-card blockquote,#reviews .review-card strong{color:#fff!important}
+#reviews .review-card .text-link,#reviews .quote-icon{color:#d5b677!important}
+#reviews .section-cta .button{background:#c6a66a!important;color:#1c302a!important;border-color:#c6a66a!important}
+#contact{background:linear-gradient(115deg,#1c302b 0%,#37674d 50%,#1d342f 100%)!important}
+#contact .contact-card{border-radius:32px!important;background:rgba(255,255,255,.09)!important;border:1px solid rgba(255,255,255,.23)!important}
+#contact .contact-copy,#contact .contact-copy p,#contact .contact-details,#contact .contact-details strong,#contact .contact-details span,#contact .contact-details a{color:#fff!important}
+#contact .contact-form{background:rgba(255,255,255,.96)!important;border-radius:24px!important;padding:24px!important}
+#faq .faq-item{border-radius:18px!important}
+#practice .service-card{border-radius:27px!important;background:linear-gradient(155deg,#fffefa,#f3f1e8)!important}
+#articles .article-card,#press .article-card{border-radius:27px!important}
+@media(max-width:800px){
+#why-moyal .why-moyal-item{border-radius:23px!important}
+#cases .result-card{padding:29px 23px!important;border-radius:25px!important}
+#reviews .review-grid{gap:20px!important}
+#reviews .review-card{border-radius:25px!important}
+#contact .contact-card{border-radius:25px!important}
+#contact .contact-form{padding:18px!important;border-radius:20px!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
