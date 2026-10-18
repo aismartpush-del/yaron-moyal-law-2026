@@ -789,6 +789,33 @@ body{background:#fdfbf6;color:#303f34}
  #home.hero .reference-proof-band{order:2!important;position:relative!important;z-index:2!important;display:grid!important;background:#293e31!important;padding:16px 10px 27px!important}
  .contact-float{display:none!important}
 }
+
+/* Hero rebuild: single full-bleed composition, portrait readable in upper half,
+   headline and actions anchored to lower part like reference. */
+@media(max-width:800px){
+ .site-header .brand .brand-mark{display:block!important;width:44px!important;height:44px!important;flex:0 0 44px!important;filter:brightness(0) invert(1)!important;mix-blend-mode:screen!important;background:transparent!important;object-fit:contain!important}
+ #home.hero{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:1fr auto!important;position:relative!important;isolation:isolate!important;overflow:hidden!important;min-height:1120px!important;height:auto!important;background:#293e31!important}
+ #home.hero .hero-portrait{position:absolute!important;inset:0!important;z-index:0!important;display:block!important;width:100%!important;height:100%!important;min-height:0!important;overflow:hidden!important;background:#293e31!important}
+ #home.hero .hero-portrait img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 8%!important;filter:none!important}
+ #home.hero::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;pointer-events:none!important;background:linear-gradient(180deg,rgba(20,32,27,.05) 0%,rgba(20,32,27,.10) 22%,rgba(20,32,27,.46) 39%,rgba(15,29,24,.87) 61%,rgba(12,26,22,.96) 100%)!important}
+ #home.hero .hero-intro{position:relative!important;grid-column:1!important;grid-row:1!important;z-index:2!important;align-self:end!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:center!important;flex:initial!important;width:100%!important;max-width:none!important;min-height:0!important;margin:0!important;padding:390px 20px 20px!important;background:transparent!important;text-align:center!important}
+ #home.hero .hero-eyebrow{font-size:12px!important;margin:0 auto 8px!important;color:#e6c681!important}
+ #home.hero h1{font-size:clamp(34px,8.4vw,44px)!important;line-height:1.2!important;margin:8px auto 15px!important;color:#fff!important}
+ #home.hero h1 span{font-size:.7em!important;margin-top:12px!important;color:#fff!important}
+ #home.hero .hero-copy{font-size:clamp(17px,4.1vw,21px)!important;line-height:1.5!important;margin:10px auto 13px!important;color:#fff!important}
+ #home.hero .hero-offer{font-size:14px!important;margin:4px auto!important;color:#fff!important}
+ #home.hero .hero-actions{display:flex!important;flex-direction:column!important;margin:20px auto 0!important;gap:11px!important;width:100%!important}
+ #home.hero .hero-actions .button{min-height:62px!important;font-size:18px!important}
+ #home.hero .reference-proof-band{position:relative!important;grid-column:1!important;grid-row:2!important;z-index:2!important;align-self:end!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;order:initial!important;background:transparent!important;margin:0!important;padding:20px 8px 25px!important}
+ #home.hero .reference-proof-band strong{font-size:clamp(17px,4.2vw,24px)!important}
+ #home.hero .reference-proof-band span{font-size:11px!important}
+ .contact-float{display:none!important}
+}
+@media(max-width:390px){
+ #home.hero{min-height:1080px!important}
+ #home.hero .hero-intro{padding-top:360px!important}
+ #home.hero h1{font-size:32px!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
