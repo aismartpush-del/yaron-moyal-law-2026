@@ -1030,6 +1030,200 @@ html body section#reviews :is(.review-card,.testimonial-card),html body section#
  box-shadow:0 18px 38px rgba(9,28,20,.23)!important;
 }
 
+
+/* Desktop visual QA: reference-like right-side message, uninterrupted portrait on left.
+   Desktop-only; approved wording and mobile portrait layout remain unchanged. */
+@media (min-width:901px){
+  html body section#home.clean-hero{
+    display:grid!important;
+    grid-template-columns:minmax(0,51%) minmax(0,49%)!important;
+    grid-template-rows:minmax(0,1fr) auto!important;
+    direction:ltr!important;
+    align-items:stretch!important;
+    justify-content:stretch!important;
+    min-height:clamp(700px,50vw,800px)!important;
+    height:auto!important;
+    padding:0!important;
+    background:linear-gradient(125deg,#4f6956 0%,#2d4839 58%,#1c3229 100%)!important;
+    isolation:isolate!important;
+  }
+  html body #home.clean-hero .clean-hero-photo{
+    position:absolute!important;
+    inset:0 auto 0 0!important;
+    left:0!important;right:auto!important;
+    top:0!important;bottom:0!important;
+    width:60%!important;height:100%!important;
+    z-index:0!important;
+    overflow:hidden!important;
+  }
+  html body #home.clean-hero .clean-hero-photo img{
+    display:block!important;
+    width:100%!important;height:100%!important;
+    object-fit:cover!important;
+    object-position:center 24%!important;
+  }
+  html body #home.clean-hero::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:1!important;
+    pointer-events:none!important;
+    background:
+      linear-gradient(90deg,rgba(25,44,35,.02) 0%,rgba(25,44,35,.03) 31%,rgba(32,54,42,.70) 48%,rgba(29,49,39,.97) 61%,rgba(24,43,34,.99) 100%),
+      linear-gradient(0deg,rgba(18,38,29,.43),transparent 36%)!important;
+  }
+  html body #home.clean-hero .clean-hero-content{
+    box-sizing:border-box!important;
+    grid-column:2!important;
+    grid-row:1!important;
+    position:relative!important;
+    z-index:2!important;
+    direction:rtl!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:stretch!important;
+    text-align:right!important;
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:65px clamp(27px,5vw,100px) 18px clamp(14px,2.5vw,44px)!important;
+    gap:15px!important;
+  }
+  html body #home.clean-hero :is(.clean-hero-eyebrow,.clean-hero-copy,.clean-hero-offer,.clean-hero-offer strong,.clean-hero-offer span){
+    text-align:right!important;
+  }
+  html body #home.clean-hero h1{
+    max-width:100%!important;
+    font-size:clamp(38px,4vw,66px)!important;
+    line-height:1.16!important;
+    letter-spacing:-.025em!important;
+    text-align:right!important;
+    margin:0!important;
+    text-shadow:0 3px 20px rgba(0,0,0,.14)!important;
+  }
+  html body #home.clean-hero h1 span{
+    font-size:.67em!important;
+    line-height:1.28!important;
+    margin-top:10px!important;
+  }
+  html body #home.clean-hero .clean-hero-copy{
+    max-width:100%!important;
+    font-size:clamp(17px,1.4vw,23px)!important;
+    line-height:1.55!important;
+  }
+  html body #home.clean-hero .clean-hero-actions{
+    width:100%!important;
+    max-width:none!important;
+    flex-direction:row!important;
+    gap:12px!important;
+    margin-top:13px!important;
+  }
+  html body #home.clean-hero .clean-hero-actions .button{
+    min-width:0!important;
+    flex:1 1 0!important;
+    min-height:60px!important;
+    font-size:clamp(15px,1.14vw,19px)!important;
+    padding:12px 14px!important;
+  }
+  html body #home.clean-hero .clean-hero-proof{
+    position:relative!important;
+    z-index:2!important;
+    direction:rtl!important;
+    grid-column:2!important;
+    grid-row:2!important;
+    align-self:end!important;
+    justify-self:stretch!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:16px clamp(27px,5vw,100px) 37px clamp(14px,2.5vw,44px)!important;
+    background:none!important;
+  }
+  html body #home.clean-hero .clean-hero-proof strong{
+    font-size:clamp(17px,1.45vw,26px)!important;
+  }
+  html body #home.clean-hero .clean-hero-proof span{
+    font-size:clamp(11px,.95vw,15px)!important;
+  }
+}
+@media (min-width:901px) and (max-width:1150px){
+  html body #home.clean-hero .clean-hero-content{
+    padding:45px 27px 12px 14px!important;
+  }
+  html body #home.clean-hero .clean-hero-proof{
+    padding:12px 27px 25px 14px!important;
+  }
+  html body #home.clean-hero h1{font-size:clamp(36px,4vw,50px)!important}
+  html body #home.clean-hero .clean-hero-actions{flex-direction:column!important}
+}
+/* Header icons are intentionally dark on cream, not white-on-white circles. */
+@media (min-width:1101px){
+  html body .site-header .header-container{
+    max-width:1540px!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:clamp(12px,2vw,32px)!important;
+    padding-inline:clamp(22px,3.1vw,52px)!important;
+  }
+  html body .site-header .brand{
+    flex:0 0 auto!important;
+    margin:0!important;
+  }
+  html body .site-header .nav{
+    display:flex!important;
+    flex:1 1 auto!important;
+    justify-content:center!important;
+    gap:clamp(8px,1.15vw,19px)!important;
+    min-width:0!important;
+  }
+  html body .site-header .header-socials{
+    display:flex!important;
+    flex:0 0 auto!important;
+    align-items:center!important;
+    gap:9px!important;
+    margin:0!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  html body .site-header .header-socials a{
+    display:grid!important;
+    place-items:center!important;
+    width:39px!important;
+    height:39px!important;
+    min-width:39px!important;
+    border-radius:50%!important;
+    border:1.5px solid #d0b77f!important;
+    background:#fffaf0!important;
+    color:#304d3b!important;
+    opacity:1!important;
+    visibility:visible!important;
+    box-shadow:0 2px 9px rgba(7,26,14,.15)!important;
+    transition:background .2s ease,color .2s ease,transform .2s ease!important;
+  }
+  html body .site-header .header-socials a svg{
+    display:block!important;
+    width:19px!important;
+    height:19px!important;
+    color:inherit!important;
+    fill:currentColor!important;
+    opacity:1!important;
+  }
+  html body .site-header .header-socials a:last-child svg{
+    fill:none!important;
+    stroke:currentColor!important;
+  }
+  html body .site-header .header-socials a:hover,
+  html body .site-header .header-socials a:focus-visible{
+    background:#c8aa67!important;
+    color:#183727!important;
+    border-color:#f4e0a9!important;
+    transform:translateY(-2px)!important;
+  }
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
