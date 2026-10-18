@@ -690,6 +690,41 @@ body{background:#fdfbf6;color:#303f34}
  #home.hero::before{z-index:1!important}
  #home.hero .hero-intro,#home.hero .reference-proof-band{z-index:2!important}
 }
+
+/* Mobile UX audit: full-screen accessible menu, reliable stacking, balanced hero spacing. */
+@media(max-width:1100px){
+ .site-header .mobile-menu[open]{z-index:9999!important}
+ .site-header .mobile-menu[open] .nav-mobile{display:flex!important;position:fixed!important;top:var(--mobile-nav-top,100px)!important;right:0!important;left:0!important;bottom:0!important;width:100vw!important;max-height:none!important;height:calc(100dvh - var(--mobile-nav-top,100px))!important;overflow-y:auto!important;overscroll-behavior:contain!important;background:#fdfbf6!important;color:#293e31!important;padding:18px 25px 110px!important;box-shadow:0 20px 50px rgba(0,0,0,.2)!important;z-index:99999!important;align-items:stretch!important;justify-content:flex-start!important}
+ .site-header .mobile-menu[open] .nav-mobile>a{font-size:18px!important;padding:14px 9px!important;min-height:52px!important;border-bottom:1px solid #ded6c8!important;color:#293e31!important}
+ .site-header .mobile-menu[open] .nav-mobile .nav-contact{background:#40583c!important;color:white!important;border:0!important}
+ .site-header .mobile-menu .menu-toggle{background:transparent!important;border:1px solid rgba(255,255,255,.5)!important;color:#fff!important}
+ .site-header .mobile-menu .menu-toggle span{color:#fff!important}
+}
+@media(max-width:800px){
+ :root{--mobile-nav-top:100px}
+ #home.hero{min-height:720px!important;min-height:calc(100svh - 100px)!important}
+ #home.hero .hero-intro{flex:1 0 auto!important;justify-content:flex-end!important;padding:90px 22px 20px!important;max-width:650px!important}
+ #home.hero h1{font-size:clamp(31px,8.2vw,46px)!important;line-height:1.2!important;margin:8px auto 12px!important}
+ #home.hero h1 span{margin-top:9px!important}
+ #home.hero .hero-copy{margin:9px auto 10px!important;font-size:clamp(15px,3.9vw,19px)!important;line-height:1.5!important}
+ #home.hero .hero-offer{margin:3px auto 0!important}
+ #home.hero .hero-actions{margin:17px auto 0!important;gap:9px!important}
+ #home.hero .hero-actions .button{min-height:54px!important;font-size:17px!important;padding:10px 14px!important}
+ #home.hero .reference-proof-band{flex:0 0 auto!important;padding:8px 8px 22px!important}
+ #home.hero .reference-proof-band strong{font-size:clamp(15px,4vw,22px)!important}
+ #home.hero .reference-proof-band span{font-size:10px!important}
+ #home.hero .hero-portrait img{object-position:center 25%!important}
+ #home.hero::before{background:linear-gradient(180deg,rgba(13,25,24,.08) 0%,rgba(13,25,24,.3) 27%,rgba(12,23,21,.7) 55%,rgba(10,20,20,.93) 100%)!important}
+}
+@media(max-width:400px) and (max-height:740px){
+ #home.hero .hero-intro{padding-top:42px!important}
+ #home.hero .hero-eyebrow{font-size:11px!important}
+ #home.hero h1{font-size:29px!important}
+ #home.hero .hero-copy{font-size:14px!important}
+ #home.hero .hero-offer{font-size:12px!important}
+ #home.hero .hero-actions .button{min-height:47px!important}
+ #home.hero .reference-proof-band{padding-bottom:10px!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
