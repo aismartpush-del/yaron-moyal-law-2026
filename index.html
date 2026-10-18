@@ -1756,6 +1756,44 @@ html body .top-lead-form button:hover{
   html body #about .about-text{padding:25px 20px!important}
 }
 
+
+/* About photo proportions refined from actual desktop screenshot, 2026-10-18 */
+@media (min-width:1101px){
+  html body #about .wrap{
+    grid-template-columns:minmax(0,1.72fr) minmax(0,1fr)!important;
+    column-gap:24px!important;
+  }
+  html body #about .about-card{
+    grid-template-columns:minmax(0,62%) minmax(0,38%)!important;
+    align-items:stretch!important;
+  }
+  html body #about .about-text{
+    padding:32px 27px!important;
+  }
+  html body #about .about-text p{
+    font-size:clamp(15.5px,1.14vw,18px)!important;
+    line-height:1.69!important;
+    margin-bottom:16px!important;
+  }
+  html body #about .about-image{
+    height:100%!important;
+    min-height:0!important;
+    background:#e7e5e0!important;
+  }
+  html body #about .about-image img{
+    object-fit:cover!important;
+    object-position:center 18%!important;
+  }
+  html body #about .about-facts{gap:11px!important}
+  html body #about .about-fact{font-size:clamp(13px,1.05vw,15px)!important}
+}
+@media (min-width:801px) and (max-width:1100px){
+  html body #about .about-card{
+    grid-template-columns:minmax(0,62%) minmax(0,38%)!important;
+  }
+  html body #about .about-text{padding:27px 24px!important}
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
