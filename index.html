@@ -980,6 +980,16 @@ body{background:#fdfbf6;color:#303f34}
 .clean-hero:before{background:linear-gradient(180deg,rgba(15,28,24,0) 0%,rgba(15,28,24,.03) 28%,rgba(15,28,24,.20) 42%,rgba(13,29,25,.87) 59%,rgba(13,29,25,.98) 100%)!important}
 }
 @media(max-width:390px){.clean-hero{min-height:1190px!important}.clean-hero-content{padding-top:555px!important}}
+
+/* FINAL persistent contact actions: override earlier mobile hide declarations */
+html body .contact-float{display:flex!important;visibility:visible!important;opacity:1!important;position:fixed!important;top:auto!important;right:16px!important;left:auto!important;bottom:24px!important;z-index:9998!important;flex-direction:column!important;align-items:center!important;gap:11px!important;pointer-events:auto!important;transform:none!important}
+html body .contact-float>a{display:grid!important;visibility:visible!important;opacity:1!important;width:54px!important;height:54px!important;min-width:54px!important;min-height:54px!important;place-items:center!important;border-radius:50%!important;border:2px solid white!important;box-shadow:0 8px 22px rgba(0,0,0,.25)!important}
+html body .contact-float>a[href="#contact"]{display:none!important}
+html body .contact-float>a[href^="tel:"]{background:#c5a56b!important;color:#fff!important;order:0!important}
+html body .contact-float>a.whatsapp-float{background:#16a65a!important;color:#fff!important;order:1!important}
+html body .contact-float>a svg{display:block!important;width:26px!important;height:26px!important}
+html body .contact-float>a.whatsapp-float svg{fill:currentColor!important;stroke:none!important}
+@media(max-width:800px){html body .contact-float{display:flex!important;right:12px!important;left:auto!important;bottom:calc(20px + env(safe-area-inset-bottom))!important;z-index:9998!important}html body .contact-float>a{width:50px!important;height:50px!important;min-width:50px!important;min-height:50px!important}.accessibility-tools{right:auto!important;left:12px!important}}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
