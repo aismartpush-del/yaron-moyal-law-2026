@@ -494,6 +494,13 @@ body{background:var(--cream);color:var(--text)}
 #press .press-masthead{display:inline-flex;align-items:center;justify-content:center;min-height:49px;min-width:170px;padding:8px 13px;background:#fff;border:1px solid #d4c8b5;border-radius:8px;font-weight:900;line-height:1.2;letter-spacing:-.05em}#press .press-masthead-jerusalem{font-size:22px;color:#253c57}#press .press-masthead-kolhazman{font-size:23px;color:#293e31;gap:9px}#press .press-masthead-kolhazman small{font-size:11px;font-weight:600;letter-spacing:0;color:#776b5c}#press .press-publication .press-publisher-logo{min-height:49px}
 #press .press-brand-with-logo{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}#press .press-brand-with-logo .press-publisher-logo{width:115px;max-width:115px;height:38px;object-fit:contain}#press .press-brand-with-logo small{font-size:13px;font-weight:700;color:#40583c}
 #contact .meeting-locations{margin:16px 0;padding:15px 18px;border-right:3px solid #a88c65;background:#f5f2e9;border-radius:6px;line-height:1.8}#contact .meeting-locations strong{color:#293e31}
+
+/* Mobile hero portrait: responsive full-width presentation, no artificial narrow photo frame. */
+@media(max-width:800px){
+ #home.hero .hero-portrait{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;flex:0 0 auto!important;overflow:hidden!important;padding:0!important;margin:0!important;background:#f7f4ed!important;display:block!important}
+ #home.hero .hero-portrait img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;object-fit:contain!important;object-position:center!important;box-shadow:none!important;border:0!important}
+ #home.hero .hero-intro{margin:0!important;order:1!important}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><div class="preview-note">תצוגת עיצוב לאישור בלבד · הטפסים אינם מחוברים</div><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
