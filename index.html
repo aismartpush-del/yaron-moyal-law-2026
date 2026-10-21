@@ -3116,6 +3116,24 @@ html body section#about .about-office-feature .about-credentials-icon svg{
   }
 }
 
+
+/* Client requested callback-phone field right alignment on every viewport. */
+html body .top-lead-form input,
+html body .top-lead-form input[type="tel"],
+html body .contact-form input,
+html body .contact-form textarea{
+  box-sizing:border-box!important;
+  direction:rtl!important;
+  text-align:right!important;
+}
+html body .top-lead-form input::placeholder,
+html body .contact-form input::placeholder,
+html body .contact-form textarea::placeholder{
+  direction:rtl!important;
+  text-align:right!important;
+  opacity:1!important;
+}
+
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
