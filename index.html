@@ -3736,6 +3736,47 @@ html body #reviews .auth-review-arrow{display:none;flex:0 0 38px;height:38px;wid
   html body #home.clean-hero .clean-hero-content{height:820px!important}
   html body #home.clean-hero .clean-hero-photo img{top:290px!important}
 }
+
+/* 2026-10-22: persistent mobile navigation and integrated first-screen portrait.
+   Deliberately preserves every approved headline, subtitle and font size. */
+@media (max-width:800px) {
+  /* Earlier mobile overrides made the header position:relative, hiding the
+     hamburger when scrolling. Restore the original sticky behavior. */
+  html body .site-header {
+    position:-webkit-sticky!important;
+    position:sticky!important;
+    top:0!important;
+    z-index:2147482000!important;
+    overflow:visible!important;
+    transform:none!important;
+  }
+  /* The existing approved mobile header is 120px tall. The expanded
+     navigation must begin below it and anchor targets must remain visible. */
+  :root { --mobile-nav-top:120px!important; }
+  html body section[id] { scroll-margin-top:132px!important; }
+
+  /* Portrait and text already share the same grid row; move the actual
+     portrait upward inside that single panel rather than splitting them. */
+  html body #home.clean-hero .clean-hero-photo img {
+    top:clamp(215px,57vw,230px)!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center top!important;
+    transform:none!important;
+  }
+}
+@media (max-width:360px) {
+  /* Narrow phones wrap the approved oversized headline into more lines.
+     Keep the portrait's forehead clear of those lines. */
+  html body #home.clean-hero .clean-hero-photo img { top:242px!important; }
+  :root { --mobile-nav-top:126px!important; }
+  html body section[id] { scroll-margin-top:138px!important; }
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
