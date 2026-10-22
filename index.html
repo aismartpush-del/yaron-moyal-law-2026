@@ -3526,77 +3526,215 @@ html body #reviews .auth-review-arrow{display:none;flex:0 0 38px;height:38px;wid
  html body #home.clean-hero .clean-hero-photo,html body #home.clean-hero .clean-hero-content{height:890px!important}
 }
 
-/* 2026-10-22 client visual correction: primary hero headline was undersized.
-   Keep every approved word; prevent the enlarged type from covering Yaron's face. */
-@media (max-width:800px) {
-  html body #home.clean-hero .clean-hero-eyebrow {
-    font-size:clamp(15px,3.9vw,18px)!important;
-    line-height:1.34!important;
-    font-weight:850!important;
-    margin-bottom:13px!important;
-    color:#5f4c2e!important;
+/* 2026-10-22 mobile hero refinement: large headline, portrait at natural scale,
+   separate right-side brand from left-side menu. Original text and source portrait preserved. */
+@media (max-width:800px){
+  /* Make the two header areas independent so logo and hamburger never overlap. */
+  html body .site-header,
+  html body .site-header .header-container{
+    height:120px!important;
+    min-height:120px!important;
   }
-  html body #home.clean-hero h1 {
-    font-size:clamp(39px,11vw,49px)!important;
-    line-height:1.06!important;
-    font-weight:950!important;
-    letter-spacing:-.04em!important;
-    color:#183b2c!important;
-    text-shadow:0 2px 1px rgba(255,255,255,.64)!important;
-    text-align:center!important;
+  html body .site-header .header-container{
+    position:relative!important;
+    display:flex!important;
+    flex-direction:row!important;
+    justify-content:flex-start!important;
+    align-items:center!important;
+    direction:rtl!important;
+    padding:0 14px!important;
+    gap:0!important;
+  }
+  html body .site-header .brand{
+    box-sizing:border-box!important;
+    position:relative!important;
+    flex:0 1 auto!important;
+    width:calc(100% - 66px)!important;
+    max-width:calc(100% - 66px)!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:0!important;
+    transform:none!important;
+    display:flex!important;
+    flex-direction:row!important;
+    direction:rtl!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:9px!important;
+    text-align:right!important;
+  }
+  html body .site-header .brand .brand-mark{
+    display:block!important;
+    order:0!important;
+    flex:0 0 37px!important;
+    width:37px!important;
+    max-width:37px!important;
+    height:37px!important;
+    margin:0!important;
+    object-fit:contain!important;
+    filter:none!important;
+    -webkit-filter:none!important;
+    background:transparent!important;
+  }
+  html body .site-header .brand-wordmark{
+    display:flex!important;
+    order:1!important;
+    flex:1 1 auto!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    width:auto!important;
+    min-width:0!important;
     max-width:100%!important;
+    margin:0!important;
+    gap:5px!important;
+    text-align:right!important;
+  }
+  html body .site-header .brand-wordmark strong{
+    width:100%!important;
+    font-size:clamp(23px,6vw,27px)!important;
+    font-weight:900!important;
+    line-height:1.06!important;
+    text-align:right!important;
+    white-space:normal!important;
+  }
+  html body .site-header .brand-wordmark small{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    font-size:clamp(15px,4.1vw,17px)!important;
+    font-weight:800!important;
+    line-height:1.24!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    text-align:right!important;
+  }
+  html body .site-header .mobile-menu{
+    box-sizing:border-box!important;
+    display:block!important;
+    position:absolute!important;
+    top:50%!important;
+    left:14px!important;
+    right:auto!important;
+    margin:0!important;
+    padding:0!important;
+    width:48px!important;
+    flex:0 0 48px!important;
+    z-index:50!important;
+    transform:translateY(-50%)!important;
+  }
+  html body .site-header .mobile-menu .menu-toggle{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:48px!important;
+    height:48px!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  /* Preserve the very prominent main title but give its two lines breathing room. */
+  html body #home.clean-hero .clean-hero-eyebrow{
+    font-size:clamp(13px,3.7vw,16px)!important;
+    font-weight:800!important;
+    line-height:1.35!important;
+    margin:0 0 11px!important;
+    color:#655333!important;
+  }
+  html body #home.clean-hero h1{
+    font-size:clamp(37px,10.3vw,44px)!important;
+    font-weight:900!important;
+    line-height:1.09!important;
+    letter-spacing:-.036em!important;
+    color:#183b2c!important;
+    margin:0!important;
+    max-width:100%!important;
+    text-align:center!important;
     text-wrap:balance!important;
   }
-  html body #home.clean-hero h1 span {
+  html body #home.clean-hero h1 span{
     display:block!important;
-    font-size:clamp(32px,8.75vw,39px)!important;
-    line-height:1.17!important;
+    font-size:clamp(29px,7.8vw,34px)!important;
     font-weight:900!important;
-    letter-spacing:-.022em!important;
-    margin-top:14px!important;
+    line-height:1.18!important;
+    letter-spacing:-.018em!important;
+    margin-top:12px!important;
     color:#24513c!important;
     text-wrap:balance!important;
   }
+  /* Natural image ratio avoids enlarging the face: 1066x1600 portrait scales to
+     approximately 390x585 on a 390px phone. Reserve separate space for title. */
   html body #home.clean-hero .clean-hero-photo,
-  html body #home.clean-hero .clean-hero-content {
-    height:clamp(925px,242vw,1090px)!important;
+  html body #home.clean-hero .clean-hero-content{
+    height:clamp(810px,220vw,890px)!important;
+    min-height:0!important;
   }
-  html body #home.clean-hero .clean-hero-photo img {
-    transform:translateY(120px)!important;
+  html body #home.clean-hero .clean-hero-photo{
+    position:relative!important;
+    isolation:isolate!important;
+    overflow:hidden!important;
+    background:#eae5dd!important;
+  }
+  html body #home.clean-hero .clean-hero-photo img{
+    position:absolute!important;
+    display:block!important;
+    top:clamp(290px,78vw,335px)!important;
+    left:0!important;
+    right:0!important;
+    bottom:auto!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:contain!important;
     object-position:center top!important;
+    transform:none!important;
     filter:none!important;
   }
-  html body #home.clean-hero .clean-hero-content {
-    padding:26px 15px 27px!important;
+  html body #home.clean-hero .clean-hero-photo::after,
+  html body #home.clean-hero .clean-hero-photo:after{
+    background:linear-gradient(180deg,
+      rgba(246,243,237,.35) 0%,
+      rgba(246,243,237,.07) 32%,
+      rgba(246,243,237,0) 48%,
+      rgba(24,37,31,.18) 66%,
+      rgba(24,37,31,.82) 86%,
+      #202c29 100%)!important;
   }
-  html body #home.clean-hero .clean-hero-copy {
+  html body #home.clean-hero .clean-hero-content{
+    padding:23px 16px 24px!important;
+    grid-template-rows:auto auto minmax(0,1fr) auto auto auto!important;
+  }
+  html body #home.clean-hero .clean-hero-copy{
     position:relative!important;
     z-index:4!important;
-    font-size:clamp(22px,5.85vw,26px)!important;
-    line-height:1.38!important;
+    font-size:clamp(21px,5.75vw,25px)!important;
     font-weight:850!important;
-    text-shadow:0 2px 5px rgba(0,0,0,.7)!important;
+    line-height:1.39!important;
+    text-shadow:0 2px 5px rgba(0,0,0,.64)!important;
   }
-  html body #home.clean-hero .clean-hero-offer {
+  html body #home.clean-hero .clean-hero-offer{
     position:relative!important;
     z-index:4!important;
-    font-size:clamp(21px,5.6vw,25px)!important;
-    line-height:1.29!important;
+    font-size:clamp(20px,5.35vw,24px)!important;
+    line-height:1.31!important;
     font-weight:800!important;
-    text-shadow:0 2px 5px rgba(0,0,0,.7)!important;
+    text-shadow:0 2px 5px rgba(0,0,0,.64)!important;
   }
-  html body #home.clean-hero .clean-hero-offer strong {
-    font-size:clamp(24px,6.45vw,29px)!important;
-    line-height:1.3!important;
+  html body #home.clean-hero .clean-hero-offer strong{
+    font-size:clamp(23px,6.25vw,28px)!important;
     font-weight:900!important;
+    line-height:1.3!important;
   }
 }
-@media (max-width:360px) {
-  html body #home.clean-hero h1{font-size:38px!important}
-  html body #home.clean-hero h1 span{font-size:31px!important}
-  html body #home.clean-hero .clean-hero-photo img{transform:translateY(145px)!important}
+@media(max-width:360px){
+  html body .site-header,
+  html body .site-header .header-container{height:126px!important;min-height:126px!important}
+  html body .site-header .brand-wordmark small{font-size:14px!important}
+  html body #home.clean-hero h1{font-size:37px!important}
+  html body #home.clean-hero h1 span{font-size:29px!important}
   html body #home.clean-hero .clean-hero-photo,
-  html body #home.clean-hero .clean-hero-content{height:1010px!important}
+  html body #home.clean-hero .clean-hero-content{height:820px!important}
+  html body #home.clean-hero .clean-hero-photo img{top:290px!important}
 }
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
