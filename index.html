@@ -3777,6 +3777,64 @@ html body #reviews .auth-review-arrow{display:none;flex:0 0 38px;height:38px;wid
   :root { --mobile-nav-top:126px!important; }
   html body section[id] { scroll-margin-top:138px!important; }
 }
+
+/* 2026-10-22 desktop branding readability refinement.
+   Enlarge the existing logo/name, descriptive tagline and gold hero overline.
+   Desktop only; approved wording, mobile and content remain unchanged. */
+@media (min-width:1101px) {
+  html body .site-header,
+  html body .site-header .header-container {
+    height:108px!important;
+    min-height:108px!important;
+  }
+  html body .site-header .brand {
+    max-width:clamp(330px,30vw,440px)!important;
+    gap:12px!important;
+  }
+  html body .site-header .brand .brand-mark {
+    width:clamp(55px,4.2vw,64px)!important;
+    max-width:64px!important;
+    height:clamp(55px,4.2vw,64px)!important;
+    flex:0 0 clamp(55px,4.2vw,64px)!important;
+  }
+  html body .site-header .brand-wordmark {
+    min-width:0!important;
+    gap:4px!important;
+    align-items:flex-start!important;
+    text-align:right!important;
+  }
+  html body .site-header .brand-wordmark strong {
+    font-size:clamp(30px,2.8vw,40px)!important;
+    line-height:1.1!important;
+    font-weight:900!important;
+    white-space:nowrap!important;
+  }
+  html body .site-header .brand-wordmark small {
+    font-size:clamp(13px,1.12vw,16px)!important;
+    line-height:1.33!important;
+    font-weight:750!important;
+    letter-spacing:0!important;
+    white-space:normal!important;
+    text-align:right!important;
+  }
+  html body #home.clean-hero .clean-hero-eyebrow {
+    font-size:clamp(19px,1.7vw,24px)!important;
+    line-height:1.45!important;
+    font-weight:800!important;
+  }
+}
+@media (min-width:1101px) and (max-width:1250px) {
+  /* Avoid squeezing the nine navigation items on narrower desktops. */
+  html body .site-header .brand {max-width:315px!important;gap:9px!important;}
+  html body .site-header .brand .brand-mark {
+    width:52px!important;
+    max-width:52px!important;
+    height:52px!important;
+    flex-basis:52px!important;
+  }
+  html body .site-header .brand-wordmark strong {font-size:30px!important;}
+  html body .site-header .brand-wordmark small {font-size:12.5px!important;}
+}
 </style></head><body><a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a><header class="site-header"><div class="header-container">
 <a class="brand" href="#home" aria-label="משרד עורכי דין ירון מויאל - לדף הבית"><img class="brand-mark" src="assets/yaron-logo-mark.svg" alt="" aria-hidden="true" width="69" height="67"/><span class="brand-wordmark"><strong>ירון מויאל</strong><small>משרד עורכי דין · רשלנות רפואית ונזקי גוף</small></span></a>
 <nav aria-label="ניווט ראשי" class="nav" id="nav"><a href="#home">ראשי</a><a href="#about">אודות</a><a href="#practice">תחומי עיסוק</a><a href="#cases">פסקי דין</a><a href="#articles">מאמרים</a><a href="#reviews">המלצות</a><a href="#faq">שאלות ותשובות</a><a href="#press">בתקשורת</a><a class="nav-contact" href="#contact">תיאום ייעוץ</a></nav>
